@@ -1,17 +1,21 @@
 import Page from "./week-2/page" ;
+
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center  p-24 ">
-    <h1>CPRG 306: Web Development 2 - Assignments</h1>
-    <div className="p-5">
-      <Link href={"week-2"} className="border border-black hover:bg-white">
-        Click to go to week 2
+    <main className=" min-h-screen  items-center bg-slate-900 p-24 ">
+    <h1 className="text-white font-bold">CPRG 306: Web Development 2 - Assignments</h1>
+    <div className=" flex flex-col text-white font-normal mt-4">
+      <Link href={"week-2"} className="border-2  border-white h-10 w-50 hover:bg-slate-500 mb-2">
+       week 2
       </Link> 
-      <Link href={"week-3"} className="border border-black hover:bg-white">
-        Click to go to week 3
+      <Link href={"week-3"} className="border-2 border-white h-10 hover:bg-slate-500 mb-2">
+       week 3
       </Link>
+      <Link href={"week-4"} className="border-2 border-white h-10 hover:bg-slate-500">
+       week 4
+      </Link> 
     </div>  
     
     </main>
