@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 
-const NewItem = () => {
+const NewItem = ({onAddItem}) => {
     const [name, setName] = useState('');
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState('produce');
@@ -10,30 +10,31 @@ const NewItem = () => {
         event.preventDefault();
 
         const item = {
+            id: Math.random().toString(36).substring(2,9),
             name: name,
             quantity: quantity,
             category: category
-        }
+        };
 
-        console.log(item);
-        alert(`Name: ${name}, Quantity: ${quantity}, Category: ${category}`);
+        onAddItem(item);
 
+        
         setName('');
         setQuantity(1);
         setCategory('produce');
     };
 
     return (
-        <main className='flex justify-center min-h-screen bg-slate-900'>
+        <main className='ml-3 mb-9'>
 
             <form onSubmit={handleSubmit}>
-                <div >
+                <div className=' w-96'>
                     <input
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Item Name"
-                        className='w-full mt-1 border-2 border-gray-300 mb-2 p-2 rounded-lg font-sans'
+                        className='w-full border-2 border-gray-300 mb-2 p-2 rounded-lg font-sans'
                     />
 
                     <div className='flex justify-between '>
@@ -66,7 +67,7 @@ const NewItem = () => {
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <button type="submit" className='w-full bg-blue-500  mt-4 py-2 px-4 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700'>+</button>
+                    <button type="submit" className='w-full bg-blue-500  mt-4  py-2 px-4 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700'>+</button>
                 </div>
             </form>
 

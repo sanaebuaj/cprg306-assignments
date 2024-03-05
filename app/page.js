@@ -1,5 +1,4 @@
-import Page from "./week-2/page" ;
-
+import Page from './week-2/page' ;
 import Link from "next/link";
 
 export default function Home() {
@@ -18,6 +17,9 @@ export default function Home() {
       </Link> 
       <Link href={"week-5"} className="border-2 border-white h-10 hover:bg-slate-500">
        week 5
+      </Link> 
+      <Link href={"week-6"} className="border-2 border-white h-10 hover:bg-slate-500">
+       week 6
       </Link> 
     </div>  
     
