@@ -23,7 +23,10 @@ export default function Home() {
       </Link> 
       <Link href={"week-7"} className="border-2 border-white h-10 hover:bg-slate-500">
        week 7
-      </Link> 
+      </Link>
+      <Link href={"week-8"} className="border-2 border-white h-10 hover:bg-slate-500">
+       week 8
+      </Link>  
     </div>  
     
     </main>

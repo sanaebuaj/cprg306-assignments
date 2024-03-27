@@ -33,12 +33,12 @@ const NewItem = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Item Name"
-                        className='w-full mt-1 border-2 border-gray-300 mb-2 p-2 rounded-lg font-sans'
+                        className='w-full mt-1 text-black border-2 border-gray-300 mb-2 p-2 rounded-lg font-sans'
                     />
 
                     <div className='flex justify-between '>
                         <input
-                            className='w-20 ml-1 border-2 border-gray-300 rounded-lg p-2 font-sans'
+                            className='w-20 ml-1 text-black border-2 border-gray-300 rounded-lg p-2 font-sans'
                             type="number"
                             min={1}
                             max={99}
@@ -49,7 +49,7 @@ const NewItem = () => {
                         />
 
                         <select
-                            className='ml-1 border-2 border-gray-300 rounded-lg p-2 font-sans'
+                            className='ml-1 text-black border-2 border-gray-300 rounded-lg p-2 font-sans'
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}>
                             <option value disabled>Category</option>
