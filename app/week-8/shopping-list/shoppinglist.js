@@ -1,4 +1,4 @@
-
+"use client"
 import MealIdeas from "./meal-ideas";
 import ItemList from "./item-list";
 import NewItem from "./new-item";

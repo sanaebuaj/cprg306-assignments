@@ -26,6 +26,9 @@ export default function Home() {
       </Link>
       <Link href={"week-8"} className="border-2 border-white h-10 hover:bg-slate-500">
        week 8
+      </Link> 
+      <Link href={"week-10"} className="border-2 border-white h-10 hover:bg-slate-500">
+       week 10
       </Link>  
     </div>  
     

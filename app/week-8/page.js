@@ -1,7 +1,8 @@
 "use client"
+import React from 'react';
 import { useUserAuth } from "./_utils/auth-context";
-import Link from "next/link";
-import ShoppingListPage from "./shopping-list/shoppinglist";
+import Link from 'next/link';
+import ShoppingListPage from "@/app/week-8/shopping-list/shoppinglist";
 
 
 export default function LandingPage() {
@@ -21,11 +22,10 @@ export default function LandingPage() {
                             <p>Signed in as ({user?.email}).</p>
                             <button className="text-white" onClick={handleSignOut}>Sign Out</button>
                             <div className='text-white hover:underline'>
-                            <Link href="week-8/shopping-list/ShoppingListPage">
-                                Continue to your Shopping List 
-                            </Link>   
-                            </div>  
-                        </div>                                                                                                                                          
+                            
+                            <Link className='hover:underline' href="week-8/shopping-list">
+                                Continue to your Shopping List </Link>   </div>  
+                            </div>                                                                                                                                          
                               ) : (
                         <button className="text-white" onClick={handleSignIn}>
                             {user ? "Signed in as " : "Sign in with GitHub"} {user?.email}

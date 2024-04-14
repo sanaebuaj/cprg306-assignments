@@ -22,12 +22,7 @@ const Page = () => {
 		const ErracedName = selectedIt.name.replace(/(,.*|🍛|🥛|🍞|🥚|🍌|🥦|🍗|🍝|🧻|🍽️|🧼)/g, '').trim();
 
 		console.log("ErracedName:", ErracedName)
-        
-        
-        
-        
-        
-        
+               
         setSelectedItemName(ErracedName);
     };
 
@@ -40,9 +35,9 @@ const Page = () => {
                 <h3 className="text-white text-xl p-4 pb-1  font-bold">Add New Item</h3>
             
                 <NewItem onAddItem={handleAddItem} />
-                <div >
-                <ItemList className="hover:bg-orange-600 cursor-pointer" items={items} onItemSelect={(selectedIt)=>handleItemSelect(selectedIt)}/>
-                </div>
+                
+                <ItemList items={items} onItemSelect={(selectedIt)=>handleItemSelect(selectedIt)}/>
+                
             </div>
             <div className=" flex-1  max-w-sm  pt-20 pl-4   ">
              
